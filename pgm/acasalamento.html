@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script type="text/javascript" src="acasalamento.js?"></script>
+	<link rel="stylesheet" type="text/css" href="geral.css" />
+</head>
+
+<body onload ="onLoad();">
+<h3 class="container"> CRUZAMENTO</h2>
+
+<div class="container" name="divFiltro" id="divFiltro">
+     <form>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">DATA:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtDataF" name="txtDataF" placeholder="Digite a data do acasalemto...">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">TEMPORADA:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtTeporadaF" name="txtTeporadaF" placeholder="Digite o ano da temporada...">
+      </div>
+    </div>
+     </form>
+     <input type="button" value="PESQUISAR" onclick="listar();">
+     <input type="button" value="NOVO" onclick="novo();">
+</div>
+
+<div class="container" name="divCadastro" id="divCadastro">
+  <form id="frmCadastro" name="frmCadastro">
+    
+	<div class="row" name="divObterPai" id="divObterPai">      
+    </div>
+	
+	<div class="row" name="divObterMae" id="divObterMae">      
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="country">TIPO DE MONTA:</label>
+      </div>
+      <div class="col-75">
+        <select id="cboMontaI" name="cboMontaI">
+          <option value="n">Natural</option>
+          <option value="a">IA</option>
+		  <option value="f">TF</option>
+        </select>
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">DATA:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtDataI" name="txtDataI" placeholder="Digite a data da cobertura">
+      </div>
+    </div>
+	
+	<input type="button" id="btnIncluir" value="INCLUIR" onclick="incluir();">
+	<input type="button" id="btnAlterar" value="ALTERAR" onclick="alterar();">
+	<input type="hidden" id="hdnIdAcasalamento" name="hdnIdAcasalamento" value="0">
+  </form>
+</div>
+
+<div class="container" name="divLista" id="divLista">
+</div>
+
+</body>
+</html>
