@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<script type="text/javascript" src="nascimento.js?"></script>
+	<link rel="stylesheet" type="text/css" href="geral.css" />
+</head>
+
+<body onload ="onLoad();">
+<h3 class="container">NASCIMENTO</h2>
+
+<div class="container" name="divFiltro" id="divFiltro">
+     <form>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">DATA DO CRUZAMENTO:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtDataF" name="txtDataF" placeholder="Digite a data do cruzamento">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">TEMPORADA:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtTemporadaF" name="txtTemporadaF" placeholder="Digite o ano da temporada">
+      </div>
+    </div>	
+	<div class="row" name="divObterPaiF" id="divObterPaiF">      
+    </div>
+	<div class="row" name="divObterMaeF" id="divObterMaeF">      
+    </div>
+	
+     </form>
+     <input type="button" value="PESQUISAR" onclick="listar();">     
+</div>
+
+<div class="container" name="divCadastro" id="divCadastro">
+  <form id="frmCadastro" name="frmCadastro">
+	
+	<div class="row" name="divLivroI" id="divLivroI">      
+    </div>	
+	
+	<div class="row" name="divAfixo" id="divAfixo">      
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">TATUTAGEM:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtTatuagemI" name="txtTatuagemI" placeholder="Digite a tatuagem. Caso não exista informe a tatuagem da Mae.">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">NOME:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtNomeI" name="txtNomeI" placeholder="Digite um nome caso deseje.">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">DATA NASIMENTO:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtDtNascimentoI" name="txtDtNascimentoI" placeholder="Digite a data de Nascimento">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="country">VIVO:</label>
+      </div>
+      <div class="col-75">
+        <select id="cboVivoI" name="cboVivoI">
+          <option value="s">SIM</option>
+          <option value="n">NAO</option>
+        </select>
+      </div>
+    </div>
+	
+    <div class="row">
+      <div class="col-25">
+        <label for="country">SEXO:</label>
+      </div>
+      <div class="col-75">
+        <select id="cboSexoI" name="cboSexoI">
+          <option value="m">MAXO</option>
+          <option value="f">FEMEA</option>
+        </select>
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="country">PARTO:</label>
+      </div>
+      <div class="col-75">
+        <select id="cboPartoI" name="cboPartoI">
+          <option value="s">SIMPLES</option>
+          <option value="d">DUPLO</option>
+          <option value="t">TRIPLO</option>
+		  </select>
+      </div>
+    </div>
+
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">PESO DO NASIMENTO:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtPesoI" name="txtPesoI" placeholder="Digite o peso do nascimento">
+      </div>
+    </div>
+		
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">PAI:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtPaiI" name="txtPaiI">
+      </div>
+    </div>
+			
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">MAE:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtMaeI" name="txtMaeI">
+      </div>
+    </div>		
+		
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">CARACTERISTICA:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+
+	<input type="button" value="Incluir" onclick="incluir();">
+	<input type="hidden" id="hdnIdAcasalamento" name="hdnIdAcasalamento" value="0">
+	<input type="hidden" id="hdnIdPai" name="hdnIdPai" value="0">
+	<input type="hidden" id="hdnIdMae" name="hdnIdMae" value="0">
+  </form>
+</div>
+
+<div class="container" name="divLista" id="divLista">
+</div>
+
+</body>
+</html>
