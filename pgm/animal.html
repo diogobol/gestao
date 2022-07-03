@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<script type="text/javascript" src="animal.js?" defer></script>
+	<link rel="stylesheet" type="text/css" href="geral.css" />
+
+</head>
+
+<body onload ="onLoad();">
+<h3 class="container"> ANIMAL</h2>
+
+<div class="container" name="divFiltro" id="divFiltro">
+    <form>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">TATUAGEM:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="txtTatuagemF" id="txtTatuagemF" placeholder="Pesquisar..">
+      </div>
+    </div>
+	
+
+	</form>
+     <input type="button" value="PESQUISAR" onclick="listar();">
+     <input type="button" value="NOVO" onclick="novo();">
+</div>
+<div class="container" name="divCadastro" id="divCadastro">
+  <form id="frmCadastro" name="frmCadastro">
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">TATUAGEM:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtTatuagemI" name="txtTatuagemI" placeholder="Digite a tatuagem">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">NOME:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtNomeI" name="txtNomeI" placeholder="Digite um nome.">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">DATA NASCIMENTO:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtDtNascimentoI" name="txtDtNascimentoI" placeholder="Digite a data de Nascimento">
+      </div>
+    </div>
+	
+	<div class="row" id="divMorte">
+      <div class="col-25">
+        <label for="lname">DATA MORTE:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="txtDtMorteI" name="txtDtMorteI" placeholder="Digite a data da Morte">
+      </div>
+    </div>
+	
+    <div class="row">
+      <div class="col-25">
+        <label for="country">SEXO:</label>
+      </div>
+      <div class="col-75">
+        <select id="cboSexoI" name="cboSexoI">
+          <option value="m">MACHO</option>
+          <option value="f">FEMEA</option>
+        </select>
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="country">PARTO:</label>
+      </div>
+      <div class="col-75">
+        <select id="cboPartoI" name="cboPartoI">
+          <option value="s">SIMPLES</option>
+          <option value="d">DUPLO</option>
+          <option value="t">TRIPLO</option>
+		  </select>
+      </div>
+    </div>
+	    
+    <div class="row" name="divPai" id="divPai">      
+    </div>
+	
+	<div class="row" name="divMae" id="divMae">      
+    </div>
+		
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">CARACTERISTICAS:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+		<input type="button" id="btnSalvar"  value="SALVAR" onclick="incluir();">
+		<input type="button" id="btnAlterar" value="ALTERAR" onclick="alterar();">
+		<input type="hidden" id="hdnIdAnimal" name="hdnIdAnimal" value="0">
+    </div>
+  </form>
+</div>
+
+<div class="container" name="divLista" id="divLista">
+</div>
+
+</body>
+</html>
